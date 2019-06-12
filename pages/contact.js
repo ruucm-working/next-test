@@ -6,13 +6,22 @@ import { dump } from '../libraries/helpers';
 export default withData(props => (
   <App>
     <Helmet>
-      <title>{dump(props)}</title>
+      <title>contact</title>
     </Helmet>
     <div>
-      <h1>hey</h1>
+      <h1>contact</h1>
       <p>HELLO WORLD! HELLO FROM RAN!</p>
       <hr />
-      <pre>{dump(props)}</pre>
+      <p>{dump(props)}</p>
+      <p>{dump(props)}</p>
+      <p>{dump(props)}</p>
+      <p>{dump(props)}</p>
+      <p>{dump(props)}</p>
+      <p>{dump(props)}</p>
+      <p>{dump(props)}</p>
+      <p>{dump(props)}</p>
+      <p>{dump(props)}</p>
+      <p>{dump(props)}</p>
     </div>
   </App>
 ));

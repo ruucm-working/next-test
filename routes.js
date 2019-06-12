@@ -15,6 +15,8 @@ const routes = require('next-routes')();
 // @RANStartRoutes
 
 routes.add('hey', '/hey');
+routes.add('about', '/about');
+routes.add('contact', '/contact');
 // @RANEndRoutes
 // ------------ ROUTES ---------------
 //

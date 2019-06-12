@@ -38,8 +38,17 @@ export default withData(props => (
       <Link prefetch route="hey" passHref>
         Hey
       </Link>
+      <br />
 
-      <hr />
+      <Link prefetch route="about" passHref>
+        about
+      </Link>
+      <br />
+      <Link prefetch route="contact" passHref>
+        contact
+      </Link>
+
+      <br />
       <pre>{dump(props)}</pre>
       <img
         src="https://fsmedia.imgix.net/07/05/10/11/b2e4/4575/937c/7b9a134d6ae4/5pikachu-1gif.gif?rect=0%2C0%2C1000%2C500&auto=compress&dpr=2&w=650&fm=jpg"

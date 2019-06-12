@@ -6,10 +6,10 @@ import { dump } from '../libraries/helpers';
 export default withData(props => (
   <App>
     <Helmet>
-      <title>{dump(props)}</title>
+      <title>about</title>
     </Helmet>
     <div>
-      <h1>hey</h1>
+      <h1>about</h1>
       <p>HELLO WORLD! HELLO FROM RAN!</p>
       <hr />
       <pre>{dump(props)}</pre>
