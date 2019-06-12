@@ -6,8 +6,29 @@ import withData from '../libraries/withData';
 import { dump } from '../libraries/helpers';
 import { Link } from '../routes';
 
-const Wrap = styled.div`
-  background: red;
+const Wrap = styled.div``;
+
+const Row = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-columns: center;
+`;
+
+const Column = styled.div`
+  background: green;
+  flex: 0 0 33.3%;
+  max-width: 33.3%;
+`;
+
+const Content = styled.div`
+  background: pink;
+  position: relative;
+  width: 100%;
+  height: 100%;
+`;
+
+const Img = styled.img`
+  width: 100%;
 `;
 
 var Frame;
@@ -29,60 +50,137 @@ export default withData(props => {
       /> */}
       </Helmet>
       <Wrap>
-        {typeof window !== 'undefined' && Frame ? (
-          <Frame
-            size={'100%'}
-            initial={{
-              top: -100,
-              opacity: 0
-            }}
-            animate={{
-              top: 0,
-              opacity: 1
-            }}
-          >
-            {console.log('Frame', Frame)}
-            <h1>index</h1>
-            <p>HELLO WORLD! HELLO FROM RAN!</p>
-            <p>HELLO WORLD! HELLO FROM RAN!</p>
-            <p>HELLO WORLD! HELLO FROM RAN!</p>
-            <p>HELLO WORLD! HELLO FROM RAN!</p>
-            <p>
-              HELLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO
-              FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD!
-              HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO
-              WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM
-              RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO
-              FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD!
-              HELLO FROM RALLO WORLD! HELLO FROM RAN!
-            </p>
+        <Row>
+          <Column>
+            <Content>
+              {typeof window !== 'undefined' && Frame ? (
+                <Frame
+                  size={'100%'}
+                  initial={{
+                    top: -100,
+                    opacity: 0
+                  }}
+                  animate={{
+                    top: 0,
+                    opacity: 1
+                  }}
+                >
+                  <h1>index</h1>
+                  <Link prefetch route="hey" passHref>
+                    Hey
+                  </Link>
+                  <br />
 
-            <Link prefetch route="hey" passHref>
-              Hey
-            </Link>
-            <br />
+                  <Link prefetch route="about" passHref>
+                    about
+                  </Link>
+                  <br />
+                  <Link prefetch route="contact" passHref>
+                    contact
+                  </Link>
 
-            <Link prefetch route="about" passHref>
-              about
-            </Link>
-            <br />
-            <Link prefetch route="contact" passHref>
-              contact
-            </Link>
+                  <br />
+                  <Img
+                    src="https://fsmedia.imgix.net/07/05/10/11/b2e4/4575/937c/7b9a134d6ae4/5pikachu-1gif.gif?rect=0%2C0%2C1000%2C500&auto=compress&dpr=2&w=650&fm=jpg"
+                    alt="pika"
+                  />
+                </Frame>
+              ) : (
+                ''
+              )}
+            </Content>
+          </Column>
+          <Column>
+            <Content>
+              <p>HELLO WORLD! HELLO FROM RAN!</p>
+              <p>HELLO WORLD! HELLO FROM RAN!</p>
+              <p>HELLO WORLD! HELLO FROM RAN!</p>
+              <p>HELLO WORLD! HELLO FROM RAN!</p>
+              <p>
+                HELLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD!
+                HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO
+                WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO
+                FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO
+                WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO
+                FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO
+                WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO
+                FROM RAN!
+              </p>
+            </Content>
+          </Column>
+          <Column>
+            <Content>
+              <div>{dump(props)}</div>
+            </Content>
+          </Column>
+          <Column>
+            <Content>4</Content>
+          </Column>
+        </Row>
 
-            <br />
-            <img
-              src="https://fsmedia.imgix.net/07/05/10/11/b2e4/4575/937c/7b9a134d6ae4/5pikachu-1gif.gif?rect=0%2C0%2C1000%2C500&auto=compress&dpr=2&w=650&fm=jpg"
-              alt="pika"
-            />
-          </Frame>
-        ) : (
-          ''
-        )}
-        <p>{dump(props)}</p>
-        <p>{dump(props)}</p>
-        <p>{dump(props)}</p>
-        <p>{dump(props)}</p>
+        {/*     
+        <Row>
+          <Column>
+            {typeof window !== 'undefined' && Frame ? (
+              <Frame
+                size={'100%'}
+                initial={{
+                  top: -100,
+                  opacity: 0
+                }}
+                animate={{
+                  top: 0,
+                  opacity: 1
+                }}
+              >
+                {console.log('Frame', Frame)}
+                <h1>index</h1>
+                <p>HELLO WORLD! HELLO FROM RAN!</p>
+                <p>HELLO WORLD! HELLO FROM RAN!</p>
+                <p>HELLO WORLD! HELLO FROM RAN!</p>
+                <p>HELLO WORLD! HELLO FROM RAN!</p>
+                <p>
+                  HELLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD!
+                  HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM
+                  RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD!
+                  HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM
+                  RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD!
+                  HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM
+                  RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD!
+                  HELLO FROM RAN!
+                </p>
+
+                <Link prefetch route="hey" passHref>
+                  Hey
+                </Link>
+                <br />
+
+                <Link prefetch route="about" passHref>
+                  about
+                </Link>
+                <br />
+                <Link prefetch route="contact" passHref>
+                  contact
+                </Link>
+
+                <br />
+                <img
+                  src="https://fsmedia.imgix.net/07/05/10/11/b2e4/4575/937c/7b9a134d6ae4/5pikachu-1gif.gif?rect=0%2C0%2C1000%2C500&auto=compress&dpr=2&w=650&fm=jpg"
+                  alt="pika"
+                />
+              </Frame>
+            ) : (
+              ''
+            )}
+          </Column>
+
+          <Column>
+            <p>{dump(props)}</p>
+            <p>{dump(props)}</p>
+            <p>{dump(props)}</p>
+            <p>{dump(props)}</p>
+          </Column>
+        </Row> */}
       </Wrap>
     </App>
   );
