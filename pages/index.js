@@ -1,12 +1,16 @@
 import { Helmet } from 'react-helmet';
+import styled from 'styled-components';
 
 import App from '../components/App';
 import withData from '../libraries/withData';
 import { dump } from '../libraries/helpers';
 import { Link } from '../routes';
 
-var Frame;
+const Wrap = styled.div`
+  background: red;
+`;
 
+var Frame;
 export default withData(props => {
   /* eslint-disable global-require */
   if (typeof window !== 'undefined') {
@@ -24,7 +28,7 @@ export default withData(props => {
         content="https://yt3.ggpht.com/a/AGF-l79odxmUaLdPO8rxtYP3un8kS7p3aJnUGmKJGg=s900-mo-c-c0xffffffff-rj-k-no"
       /> */}
       </Helmet>
-      <div>
+      <Wrap>
         {typeof window !== 'undefined' && Frame ? (
           <Frame
             size={'100%'}
@@ -79,7 +83,7 @@ export default withData(props => {
         <p>{dump(props)}</p>
         <p>{dump(props)}</p>
         <p>{dump(props)}</p>
-      </div>
+      </Wrap>
     </App>
   );
 });
