@@ -32,8 +32,13 @@ export default withData(props => (
         RAN!
       </p>
 
-      <Link route="about">About</Link>
-      <a href="/about">about</a>
+      {/* <Link route="about">About</Link>
+      <a href="/about">about</a> */}
+
+      <Link prefetch route="hey" passHref>
+        Hey
+      </Link>
+
       <hr />
       <pre>{dump(props)}</pre>
       <img

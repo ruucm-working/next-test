@@ -14,11 +14,6 @@ const routes = require('next-routes')();
 // ------------ ROUTES ---------------
 // @RANStartRoutes
 
-
-
-
-routes.add('About', '/about');
-routes.add('Contact', '/contact');
 // @RANEndRoutes
 // ------------ ROUTES ---------------
 //
