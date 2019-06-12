@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet';
 import App from '../components/App';
 import withData from '../libraries/withData';
 import { dump } from '../libraries/helpers';
-// import { Link } from '../routes';
+import { Link } from '../routes';
 
 export default withData(props => (
   <App>
@@ -32,7 +32,7 @@ export default withData(props => (
         RAN!
       </p>
 
-      {/* <Link route="about">Create</Link> */}
+      <Link route="about">About</Link>
       <a href="/about">about</a>
       <hr />
       <pre>{dump(props)}</pre>
