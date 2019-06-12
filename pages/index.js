@@ -1,35 +1,9 @@
-// import { Framer } from 'framer';
-// if (process.browser) {
-//   import { Framer } from 'framer';
-
-//   console.log('Framer', Framer);
-// }
-
 import { Helmet } from 'react-helmet';
 
 import App from '../components/App';
 import withData from '../libraries/withData';
 import { dump } from '../libraries/helpers';
 import { Link } from '../routes';
-// const { Framer } = require('framer');
-
-// let Framer2;
-// if (typeof window !== 'undefined') {
-//   const { Framer } = require('framer');
-//   Framer2 = Framer;
-//   console.log('Framer2,', Framer2);
-// }
-
-// if (typeof window !== 'undefined') {
-//   console.log('window', window);
-
-//   // console.log('process.browser', process.browser);
-//   // const { Framer } = require('framer');
-
-//   // console.log('Framer', Framer);
-// }
-
-// console.log('Framer', Framer);
 
 var Frame;
 
