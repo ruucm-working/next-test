@@ -93,7 +93,6 @@ export default withData(props => {
             </Link>
 
             <br />
-            <pre>{dump(props)}</pre>
             <img
               src="https://fsmedia.imgix.net/07/05/10/11/b2e4/4575/937c/7b9a134d6ae4/5pikachu-1gif.gif?rect=0%2C0%2C1000%2C500&auto=compress&dpr=2&w=650&fm=jpg"
               alt="pika"
@@ -102,6 +101,10 @@ export default withData(props => {
         ) : (
           ''
         )}
+        <p>{dump(props)}</p>
+        <p>{dump(props)}</p>
+        <p>{dump(props)}</p>
+        <p>{dump(props)}</p>
       </div>
     </App>
   );
