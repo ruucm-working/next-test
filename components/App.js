@@ -5,6 +5,7 @@ import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import color from 'color';
 import themeList from '../libraries/theme';
 import { App as ThemedApp } from './Theme';
+import resetCSS from '../libraries/resetCSS';
 
 let offlineInstalled = false;
 
@@ -14,13 +15,7 @@ type Props = {
 };
 
 const GlobalStyle = createGlobalStyle`
-  * {
-    font-family: Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
-  }
-  body {
-    margin: 0;
-    padding: 0;
-  }
+  ${resetCSS}
 `;
 
 const App = ({ children, theme }: Props) => {
