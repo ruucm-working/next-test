@@ -14,6 +14,7 @@ const routes = require('next-routes')();
 // ------------ ROUTES ---------------
 // @RANStartRoutes
 
+routes.add('hey', '/hey');
 // @RANEndRoutes
 // ------------ ROUTES ---------------
 //
