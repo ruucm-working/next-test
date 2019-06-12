@@ -94,9 +94,7 @@ export default withData(props => {
           </Column>
           <Column>
             <Content>
-              <DefaultCon {...props}>
-                <PostList />
-              </DefaultCon>
+              <PostList />
               <p>HELLO WORLD! HELLO FROM RAN!</p>
               <p>HELLO WORLD! HELLO FROM RAN!</p>
               <p>HELLO WORLD! HELLO FROM RAN!</p>
