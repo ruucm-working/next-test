@@ -5,6 +5,8 @@ import App from '../components/App';
 import withData from '../libraries/withData';
 import { dump } from '../libraries/helpers';
 import { Link } from '../routes';
+import DefaultCon from '../containers/Default';
+import PostList from '../components/PostList';
 
 const Wrap = styled.div``;
 
@@ -92,6 +94,9 @@ export default withData(props => {
           </Column>
           <Column>
             <Content>
+              <DefaultCon {...props}>
+                <PostList />
+              </DefaultCon>
               <p>HELLO WORLD! HELLO FROM RAN!</p>
               <p>HELLO WORLD! HELLO FROM RAN!</p>
               <p>HELLO WORLD! HELLO FROM RAN!</p>
