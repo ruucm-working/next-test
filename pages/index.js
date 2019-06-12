@@ -33,6 +33,7 @@ export default withData(props => (
       </p>
 
       {/* <Link route="about">Create</Link> */}
+      <a href="/about">about</a>
       <hr />
       <pre>{dump(props)}</pre>
       <img
