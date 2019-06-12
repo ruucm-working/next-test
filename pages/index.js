@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet';
 import App from '../components/App';
 import withData from '../libraries/withData';
 import { dump } from '../libraries/helpers';
+// import { Link } from '../routes';
 
 export default withData(props => (
   <App>
@@ -20,6 +21,7 @@ export default withData(props => (
       <p>HELLO WORLD! HELLO FROM RAN!</p>
       <p>HELLO WORLD! HELLO FROM RAN!</p>
       <p>HELLO WORLD! HELLO FROM RAN!</p>
+
       <p>
         HELLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM
         RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM
@@ -29,6 +31,8 @@ export default withData(props => (
         RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM
         RAN!
       </p>
+
+      {/* <Link route="about">Create</Link> */}
       <hr />
       <pre>{dump(props)}</pre>
       <img
