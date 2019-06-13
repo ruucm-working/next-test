@@ -6,7 +6,7 @@ import withData from '../libraries/withData';
 import { dump } from '../libraries/helpers';
 import { Link } from '../routes';
 import DefaultCon from '../containers/Default';
-import PostList from '../components/PostList';
+import PinList from '../components/PinList';
 
 const Wrap = styled.div``;
 
@@ -94,21 +94,7 @@ export default withData(props => {
           </Column>
           <Column>
             <Content>
-              <PostList />
-              <p>HELLO WORLD! HELLO FROM RAN!</p>
-              <p>HELLO WORLD! HELLO FROM RAN!</p>
-              <p>HELLO WORLD! HELLO FROM RAN!</p>
-              <p>HELLO WORLD! HELLO FROM RAN!</p>
-              <p>
-                HELLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD!
-                HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO
-                WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO
-                FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO
-                WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO
-                FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO
-                WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO
-                FROM RAN!
-              </p>
+              <PinList />
             </Content>
           </Column>
           <Column>
@@ -120,70 +106,6 @@ export default withData(props => {
             <Content>4</Content>
           </Column>
         </Row>
-
-        {/*     
-        <Row>
-          <Column>
-            {typeof window !== 'undefined' && Frame ? (
-              <Frame
-                size={'100%'}
-                initial={{
-                  top: -100,
-                  opacity: 0
-                }}
-                animate={{
-                  top: 0,
-                  opacity: 1
-                }}
-              >
-                {console.log('Frame', Frame)}
-                <h1>index</h1>
-                <p>HELLO WORLD! HELLO FROM RAN!</p>
-                <p>HELLO WORLD! HELLO FROM RAN!</p>
-                <p>HELLO WORLD! HELLO FROM RAN!</p>
-                <p>HELLO WORLD! HELLO FROM RAN!</p>
-                <p>
-                  HELLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD!
-                  HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM
-                  RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD!
-                  HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM
-                  RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD!
-                  HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM
-                  RALLO WORLD! HELLO FROM RALLO WORLD! HELLO FROM RALLO WORLD!
-                  HELLO FROM RAN!
-                </p>
-
-                <Link prefetch route="hey" passHref>
-                  Hey
-                </Link>
-                <br />
-
-                <Link prefetch route="about" passHref>
-                  about
-                </Link>
-                <br />
-                <Link prefetch route="contact" passHref>
-                  contact
-                </Link>
-
-                <br />
-                <img
-                  src="https://fsmedia.imgix.net/07/05/10/11/b2e4/4575/937c/7b9a134d6ae4/5pikachu-1gif.gif?rect=0%2C0%2C1000%2C500&auto=compress&dpr=2&w=650&fm=jpg"
-                  alt="pika"
-                />
-              </Frame>
-            ) : (
-              ''
-            )}
-          </Column>
-
-          <Column>
-            <p>{dump(props)}</p>
-            <p>{dump(props)}</p>
-            <p>{dump(props)}</p>
-            <p>{dump(props)}</p>
-          </Column>
-        </Row> */}
       </Wrap>
     </App>
   );

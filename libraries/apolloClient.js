@@ -7,7 +7,9 @@ import persist from './persist';
 let apolloClient = null;
 
 const httpLink = createHttpLink({
-  uri: 'https://api.graph.cool/simple/v1/cj7ke77fv0e9i0122pflagbvx',
+  // uri: 'https://api.graph.cool/simple/v1/cj7ke77fv0e9i0122pflagbvx',
+  // credentials: 'include'
+  uri: 'https://api.harbor.school/graphql',
   credentials: 'include'
 });
 
