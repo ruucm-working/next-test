@@ -43,7 +43,7 @@ export default withData(props => {
   return (
     <App>
       <Helmet>
-        <title>index</title>
+        <title>index222</title>
         {/* <meta name="description" content="Helmet application" /> */}
         <meta property="og:type" content="article" />
         {/* <meta
@@ -98,9 +98,7 @@ export default withData(props => {
             </Content>
           </Column>
           <Column>
-            <Content>
-              <div>{dump(props)}</div>
-            </Content>
+            <Content>3{/* <div>{dump(props)}</div> */}</Content>
           </Column>
           <Column>
             <Content>4</Content>

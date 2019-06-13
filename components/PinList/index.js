@@ -27,13 +27,37 @@ const PostList = ({ data, loadMorePosts }: Props) => {
   console.log('data', data);
 
   return (
-    <div>
+    <React.Fragment>
       {data.pins.edges.length
         ? data.pins.edges.map((pin, id) => {
             return <p key={id}>{pin.node.title}</p>;
           })
         : 'loading!'}
-    </div>
+
+      {data.pins.edges.length
+        ? data.pins.edges.map((pin, id) => {
+            return <p key={id}>{pin.node.title}</p>;
+          })
+        : 'loading!'}
+
+      {data.pins.edges.length
+        ? data.pins.edges.map((pin, id) => {
+            return <p key={id}>{pin.node.title}</p>;
+          })
+        : 'loading!'}
+
+      {data.pins.edges.length
+        ? data.pins.edges.map((pin, id) => {
+            return <p key={id}>{pin.node.title}</p>;
+          })
+        : 'loading!'}
+
+      {data.pins.edges.length
+        ? data.pins.edges.map((pin, id) => {
+            return <p key={id}>{pin.node.title}</p>;
+          })
+        : 'loading!'}
+    </React.Fragment>
   );
 
   // if (data.allPosts && data.allPosts.length) {
